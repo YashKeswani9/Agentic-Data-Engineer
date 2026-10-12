@@ -1,15 +1,4 @@
-import sys
-
-try:
-    from langchain_openai import ChatOpenAI
-except ModuleNotFoundError as exc:
-    if exc.name != "langchain_openai":
-        raise
-    raise ModuleNotFoundError(
-        "langchain_openai is not installed in the Python environment running this "
-        f"script ({sys.executable}). Install it with: "
-        f'"{sys.executable}" -m pip install langchain-openai'
-    ) from exc
+from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 load_dotenv()  # Load environment variables from .env file
 
